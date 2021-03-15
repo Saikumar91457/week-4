@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Promises</title>
+    </head>
+    <body>
+        <p id="demo"></p>
+        <script>
+            function myDisplayer(any){
+                document.getElementById("demo").innerHTML=any;
+            }
+            let myPromise=new Promise(function(resolve,reject){
+                let x=10;
+                if(x%2==0){
+                    resolve("Even");
+                }
+                else{
+                    reject("False");
+                }
+            });
+            myPromise.then(
+                function(value) {myDisplayer(value);},
+                function(error) {myDisplayer(error);}
+            );
+        </script>
+    </body>
+</html>

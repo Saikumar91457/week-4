@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Async</title>
+    </head>
+    <body>
+        <p id="demo"></p>
+        <script>
+            function myDisplayer(any){
+                document.getElementById("demo").innerHTML=any;
+            }
+           async function myfunction(){
+               return "Hello!!";
+           }
+           myfunction().then(
+               function(value){myDisplayer(value);}
+           );
+        </script>
+    </body>
+</html>
